@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0B0F19;
+  --color-surface-low: #111827;
+  --color-surface-mid: #161F30;
+  --color-surface-elevated: #1E293B;
+  --color-surface-editor: #0E1422;
+  --color-border-subdued: #1E293B;
+  --color-border-prominent: #334155;
+  --color-neural: #8B5CF6;
+  --color-neural-deep: #7C3AED;
+  --color-mastery-emerald: #10B981;
+  --color-mastery-teal: #14B8A6;
+  --color-diagnostic-amber: #F59E0B;
+  --color-diagnostic-rose: #F43F5E;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: #F8FAFC;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Sleek Scrollbar for IDE & Panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Workbench Splitter & Resizing */
+.resizer-x {
+  width: 4px;
+  cursor: col-resize;
+  background-color: #1E293B;
+  transition: background-color 0.15s ease;
+}
+.resizer-x:hover, .resizer-x.active {
+  background-color: #8B5CF6;
+}
+
+.resizer-y {
+  height: 4px;
+  cursor: row-resize;
+  background-color: #1E293B;
+  transition: background-color 0.15s ease;
+}
+.resizer-y:hover, .resizer-y.active {
+  background-color: #8B5CF6;
+}
+
+/* Monospace font utility */
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
